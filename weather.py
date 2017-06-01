@@ -1,5 +1,4 @@
 import requests
-import json
 
 cityState = input("Enter the ciy, state you would like the weather for: ")
 
