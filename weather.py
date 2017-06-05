@@ -1,9 +1,15 @@
 import requests
 import sys
+import json
 
-print(sys.argv)
+#print(sys.argv)
 
-cityState = input("Enter the ciy, state you would like the weather for: ")
+location_url = 'http://freegeoip.net/json'
+
+r = requests.get(location_url)
+location = json.loads(r.text)
+
+cityState = location['city'] + ', ' + location['region_code']   ##input("Enter the ciy, state you would like the weather for: ")
 
 requestUrl = 'http://apidev.accuweather.com/locations/v1/search?q=' + cityState + '&apikey=hoArfRosT1215'
 
