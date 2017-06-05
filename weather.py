@@ -1,4 +1,7 @@
 import requests
+import sys
+
+print(sys.argv)
 
 cityState = input("Enter the ciy, state you would like the weather for: ")
 
